@@ -112,6 +112,10 @@ app.post("/cadastro", (req, res) => {
         }
     })
 });
+app.get("/posts", (req, res) => {
+    console.log("GET /posts")
+    res.render("pages/posts", { titulo: "Postagens" , req: req, posts: resultadoDoBanco});
+})
 app.get("/post_create", (req, res) => {
     console.log("GET /post_create")
     //verificar se o usuário está logado 

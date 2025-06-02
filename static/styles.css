@@ -89,6 +89,9 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
+.conteudo{
+    flex: 1;
+}
 
 footer {
     text-align: center;

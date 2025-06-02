@@ -1,0 +1,15 @@
+
+<h1>Postagens do Blog</h1>
+
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(function(post) { %>
+      <div class="post">
+        <h2><%= post.titulo %></h2>
+        <p class="meta"><strong>ID do autor:</strong> <%= post.id_users %></p>
+        <p><%= post.conteudo %></p>
+        <p class="meta"><strong>Postado em:</strong> <%= post.data_criacao %></p>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p>Nenhuma postagem disponível.</p>
+  <% } %>
