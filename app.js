@@ -1,11 +1,18 @@
 const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
 const session = require("express-session");
 const { get } = require("express/lib/response");
 const sqlite3 = require("sqlite3");
-//const bodyParser = require('body-parser');
-
+const bodyParser = require('body-parser');
 
 const app = express(); //Armazena as chamadas e propriedades da biblioteca EXPRESS
+app.use(helmet())
+app.use(cors({
+    origin: "https://google.com.br"
+}))
+app.use(bodyParser.json({ limit: '2mb' 
+}));
 
 const PORT = 8000; //configura a porta TCP do express
 
